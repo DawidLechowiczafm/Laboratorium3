@@ -1,0 +1,21 @@
+Czy adres MAC urządzenia źródłowego pasuje do interfejsu twojego PC?
+Tak
+Czy adres MAC urządzenia docelowego w programie Wireshark, pasuje do adresu MAC komputera twojego kolegi z zajęć?
+Tak
+W jaki sposób twój PC uzyskał MAC adres komputera PC, na który wysyłałeś żądania ping?
+Komputer użył protokołu ARP (Address Resolution Protocol)
+
+www.yahoo.com IP: 87.248.116.11 MAC: 48:bd:ce:7a:17:10
+www.cisco.com IP: 23.197.160.120 MAC: 48:bd:ce:7a:17:10
+www.google.com IP: 142.250.109.105 MAC: 48:bd:ce:7a:17:10
+
+Co jest istotne w tej informacji?
+Mimo wysyłania zapytań do różnych adresów IP, adres docelowy MAC jest dla nich wszystkich taki sam.
+
+Czym różni się ta informacja od informacji uzyskanej w części 2, dotyczącej używania polecenia ping w sieci lokalnej?
+W sieci lokalnej Adres docelowy MAC w Wiresharku to fizyczny adres karty sieciowej konkretnego komputera, do którego wysyłasz ping.
+Adres docelowy MAC nie należy do serwera końcowego, lecz do interfejsu Twojej bramy domyślnej, która pośredniczy w wysyłce pakietu poza sieć lokalną.
+
+Dlaczego Wireshark pokazuje aktualny adres MAC dla hostów lokalnych, ale już nie pokazuje aktualnego MAC dla hostów zdalnych?
+Adresy MAC służą do dostarczania danych wyłącznie wewnątrz jednego segmentu sieci lokalnej.
+Gdy pakiet trafia do routera, ramka Ethernet jest rozpakowywana i tworzona na nowo dla kolejnego odcinka drogi. Oryginalny adres MAC serwera zdalnego nigdy nie dociera do Twojej sieci LAN.
